@@ -1,4 +1,10 @@
 # JJPortfolio
 Code for Portfolio Site.
 
-The main purpose of this is to show abilities with CSS. While I am comfortable and knowlegable with HTML, JavaScript +libraries, and Python. CSS is my real passion, I love all the things it brings to table for a website. From animation loops to getting that single word in just right spot. The ability to use psuedo-elements such as :before and :after along with about 1,000 others completing most tasks without being able to change the HTML isn't a huge problem, just more of nuisance. Using flexbox or grid make layouts incredibly straight-forward. Some would argue that many things within CSS are easily accomplished with the use of JavaScript and its many libraries (i.e. React, Vue, or Angular) and they very well could be correct for a few things. I would argue that those things are few and far between. on this site ive taken a few things that most would do with JavaScript and done them in CSS to show how easily it can really be done. 
+Full website built from the ground up, using HTML and CSS. This site aims to showcase the real capabilities of CSS, using animations, webkits, and cards to add depth and demension to the project. 
+
+In the code intself you can find comments throughout that explain what each secction is doing. poking around through similar sites I found I was able to use less CSS to do more.
+
+While this site is a portfolio, it is equally a passion project and reflects the things that I like. In the projects section you can see full, multi-page sites that i have made for clients organizations and businesses using HTML, CSS, and JavaScript/React along with programs made using C++, C#, and Python.
+
+Currently learning PHP and Apache, I hope to have fully custom back-end support for all projects in the near future, as well as contact forms that upon submission email automaticly to the business or organization email.
