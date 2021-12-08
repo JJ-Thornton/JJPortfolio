@@ -1,0 +1,845 @@
+/*universal*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(203, 30%, 26%);
+  font-size: 16px;
+}
+
+/*fonts*/
+@font-face {
+  font-family: 'windsongregular';
+  src: url('Windsong/windsong-webfont.woff2') format('woff2'),
+    url('Windsong/windsong-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin_modern_mono_light10BdOb';
+  src: url('Latin-font/lmmonolt10-boldoblique-webfont.woff2') format('woff2'),
+    url('Latin-font/lmmonolt10-boldoblique-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*scrollbar(track & thumb)*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent url(../../../../../);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(200, 100%, 46%);
+  width: 8px;
+  border-radius: 100vw;
+}
+
+/*Keyframe Animations*/
+/*About Card color pulse*/
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 hsl(223, 50%, 57%);
+  }
+  50% {
+    box-shadow: 0 0 1.5em hsl(138, 93%, 58%) 0;
+  }
+  100% {
+    box-shadow: 0 0 0 hsl(223, 50%, 57%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0.75em 0 hsl(138, 93%, 58%);
+    box-shadow: 0 0 0.75em 0 hsl(138, 93%, 58%);
+  }
+  65% {
+    -moz-box-shadow: 0 0 4em 0 hsl(223, 50%, 57%);
+    box-shadow: 0 0 4em 0 hsl(223, 50%, 57%);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 hsl(138, 93%, 58%);
+    box-shadow: 0 0 0 0 hsl(138, 93%, 58%);
+  }
+}
+
+/*Main Languages logo flip*/
+@keyframes flip {
+  0% {
+    transform: rotateY(720deg);
+  }
+}
+
+/*Other languages card background animation*/
+@keyframes gradientPulse {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+/*Projects cards background animation*/
+@keyframes gradientPulse1 {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/*on load animation for headers and about card*/
+@keyframes slide-out {
+  0% {
+    transform: scale(0, 0.15);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+/*Type animation for project card*/
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+/*type animation cursor*/
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+/*logo div*/
+
+/*main heading/name*/
+.mainHead {
+  width: 55%;
+  height: 5.2em;
+  top: 1em;
+  border-radius: 5px;
+  background-color: hsl(138, 93%, 58%);
+  position: fixed;
+  font-family: 'latin_modern_mono_light10BdOb';
+}
+
+.MyLogo {
+  width: 5em;
+  height: 5em;
+  margin-left: 1.25em;
+  margin-top: 0.5em;
+}
+
+.mainName {
+  position: absolute;
+  bottom: 1em;
+  font-size: 2em;
+  left: 4em;
+}
+
+.continued {
+  font-size: 1.5em;
+  font-weight: 225;
+  position: absolute;
+  top: 2em;
+  left: 15em;
+  color: hsl(120, 10%, 26%);
+}
+
+/*secondary head & socials*/
+.secondaryHeader {
+  width: 48%;
+  height: 5.5em;
+  left: 49em;
+  top: 3.3em;
+  border-radius: 5px;
+  position: fixed;
+  background-color: hsl(223, 50%, 57%);
+}
+
+.socials1 {
+  font-family: 'windsongregular';
+  font-size: 2em;
+  font-weight: 500;
+  display: inline-block;
+  position: absolute;
+  width: 75%;
+  left: 2em;
+}
+
+.socials2 {
+  font-family: 'windsongregular';
+  font-size: 2em;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+  width: 45%;
+  top: 1.7em;
+  left: 6.5em;
+}
+
+.btn1 {
+  display: flex;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 100%;
+  left: 22.6em;
+  top: 0.2em;
+}
+
+.fb {
+  background-image: url(images/facebook_icon-icons.com_53612.svg);
+  background-size: cover;
+  border: hidden;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  position: absolute;
+  top: 0.45em;
+  left: 0.5em;
+}
+
+.btn2 {
+  display: flex;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 100%;
+  top: 0.2em;
+  left: 26em;
+}
+
+.ig {
+  background-image: url(images/4202090instagramlogosocialsocialmedia-115598_115703.svg);
+  background-size: cover;
+  border: hidden;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  position: absolute;
+  top: 0.45em;
+  left: 0.5em;
+}
+
+.btn3 {
+  display: flex;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 100%;
+  top: 2.7em;
+  left: 9.5em;
+}
+
+.fvr {
+  background-image: url(images/fiverr_logo_icon_168207.svg);
+  background-size: cover;
+  border: hidden;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  position: absolute;
+  top: 0.45em;
+  left: 0.5em;
+}
+
+/*Cards*/
+.Card-A {
+  width: 50em;
+  height: 35em;
+  display: block;
+  position: relative;
+  top: 12em;
+  left: 21em;
+  background-color: hsla(0, 0%, 0%, 0.534);
+  box-shadow: 0 0 1.5em 0 hsl(223, 50%, 57%);
+  border-radius: 15px;
+  animation: pulse ease-out 3s infinite;
+}
+
+.A-one {
+  width: 40em;
+  height: 25em;
+  position: absolute;
+  left: 4.6em;
+  top: 3em;
+  text-align: center;
+  background-color: hsl(138, 93%, 58%);
+  border-radius: 10px;
+  border: 3.5px solid hsl(223, 50%, 57%);
+  font-family: 'latin_modern_mono_light10BdOb';
+}
+
+.contentOne {
+  padding: 10px;
+  font-size: 1.6em;
+}
+
+.gitHub {
+  font-family: 'latin_modern_mono_light10BdOb';
+  position: absolute;
+  top: 35.5em;
+  left: 23.6em;
+  text-align: center;
+  background: hsl(203, 30%, 26%);
+  padding: 1.5em 2.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: hsl(138, 93%, 58%);
+  cursor: pointer;
+  border: hsl(138, 93%, 58%) 0.125em solid;
+  font-weight: bold;
+  text-shadow: 0 0 0.125em hsl(0, 0%, 100%), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 hsl(138, 93%, 58%),
+    0 0 0.5em 0 hsl(138, 93%, 58%);
+}
+
+/*Card-D*/
+/*Fourth Card and projects*/
+.Card-D {
+  width: 100vw;
+  height: 18em;
+  margin-top: 14em;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 0%, 0.534);
+  display: flex;
+  gap: 1em;
+  font-family: 'latin_modern_mono_light10BdOb';
+  font-size: 2em;
+}
+
+/*Full Desktop view*/
+@media (min-width: 1500px) {
+  .headerWrap {
+    width: 100%;
+    height: 6.5em;
+    background-color: hsl(203, 30%, 26%);
+    position: fixed;
+    z-index: 3;
+  }
+
+  .MyLogo {
+    width: 5em;
+    height: 5em;
+    margin-left: 1.25em;
+    margin-top: 0.5em;
+  }
+
+  .mainHead {
+    width: 55%;
+    height: 6em;
+    top: 0.8em;
+    border-radius: 5px;
+    border: 3px solid hsl(223, 50%, 57%);
+    background-color: hsl(138, 93%, 58%);
+    position: fixed;
+    font-family: 'latin_modern_mono_light10BdOb';
+    animation: slide-out 3s 1;
+    z-index: 10000;
+  }
+
+  .mainName {
+    font-size: 3em;
+    font-weight: 500;
+    position: absolute;
+    left: 2em;
+    bottom: 0.7em;
+    color: hsl(120, 10%, 26%);
+  }
+
+  .continued {
+    font-size: 1.75em;
+    font-weight: 225;
+    position: absolute;
+    top: 2em;
+    left: 15em;
+    color: hsl(120, 10%, 26%);
+  }
+
+  /*secondary head & socials*/
+  .secondaryHeader {
+    width: 48%;
+    height: 5.7em;
+    left: 49.2em;
+    top: 3em;
+    border-radius: 5px;
+    border: 3px solid hsl(138, 93%, 50%);
+    position: fixed;
+    background-color: hsl(223, 50%, 57%);
+    animation: slide-out 3.5s 1;
+    z-index: 10000;
+  }
+
+  .btn1 {
+    display: flex;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    height: 4.5em;
+    width: 4.5em;
+    border-radius: 100%;
+    border: 3px solid hsl(138, 93%, 58%);
+    left: 25em;
+    top: 0.25em;
+  }
+
+  .btn2 {
+    display: flex;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    height: 4.5em;
+    width: 4.5em;
+    border-radius: 100%;
+    border: 3px solid hsl(138, 93%, 58%);
+    top: 0.25em;
+    left: 32em;
+  }
+
+  .btn3 {
+    display: flex;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    height: 4.5em;
+    width: 4.5em;
+    border-radius: 100%;
+    border: 3px solid hsl(138, 93%, 58%);
+    top: 0.25em;
+    left: 39em;
+  }
+
+  .fb {
+    background-image: url(images/facebook_icon-icons.com_53612.svg);
+    background-size: cover;
+    border: hidden;
+    height: 3.5em;
+    width: 3.5em;
+    display: flex;
+    position: absolute;
+    top: 0.925em;
+    left: 0.925em;
+  }
+
+  .ig {
+    background-image: url(images/4202090instagramlogosocialsocialmedia-115598_115703.svg);
+    background-size: cover;
+    border: hidden;
+    height: 3.5em;
+    width: 3.5em;
+    display: flex;
+    position: absolute;
+    top: 0.89em;
+    left: 0.95em;
+  }
+
+  .fvr {
+    background-image: url(images/fiverr_logo_icon_168207.svg);
+    background-size: cover;
+    border: hidden;
+    height: 3.5em;
+    width: 3.5em;
+    display: flex;
+    position: absolute;
+    top: 0.89em;
+    left: 0.95em;
+  }
+
+  .socials1 {
+    font-family: 'windsongregular';
+    font-size: 2em;
+    font-weight: 600;
+    color: hsl(120, 10%, 17%);
+    display: flex;
+    position: absolute;
+    width: 45%;
+    top: 0.2em;
+    left: 1em;
+  }
+  .socials2 {
+    font-family: 'windsongregular';
+    font-size: 2em;
+    font-weight: 600;
+    color: hsl(120, 10%, 17%);
+    display: flex;
+    position: absolute;
+    width: 45%;
+    top: 1.3em;
+    left: 1.5em;
+  }
+
+  /*Cards*/
+  .Card-A {
+    width: 70em;
+    height: 35em;
+    display: block;
+    position: relative;
+    top: 11.5em;
+    left: 13.25em;
+    border-radius: 15px;
+    background-color: hsla(0, 0%, 0%, 0.534);
+    box-shadow: 0 0 1.5em 0 hsl(223, 50%, 57%);
+    animation: pulse 3s ease-out infinite;
+  }
+
+  .A-one {
+    width: 60em;
+    height: 26em;
+    position: absolute;
+    top: 2.5em;
+    left: 5em;
+    text-align: center;
+    background-color: hsl(138, 93%, 58%);
+    border-radius: 10px;
+    border: 3.5px solid hsl(223, 50%, 57%);
+    box-shadow: inset 0 0 0 0.75em hsl(138, 93%, 58%),
+      0 0 2.5em 0 hsl(138, 93%, 58%);
+    font-family: 'latin_modern_mono_light10BdOb';
+    animation: slide-out 2s 1;
+  }
+
+  .contentOne {
+    padding: 10px;
+    font-size: 1.95em;
+  }
+
+  .gitHub {
+    font-family: 'latin_modern_mono_light10BdOb';
+    position: absolute;
+    top: 36em;
+    left: 36em;
+    text-align: center;
+    background: hsl(203, 30%, 26%);
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: hsl(138, 93%, 58%);
+    cursor: pointer;
+    border: hsl(138, 93%, 58%) 0.125em solid;
+    font-weight: bold;
+    text-shadow: 0 0 0.125em hsl(0, 0%, 100%), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 hsl(138, 93%, 58%),
+      0 0 0.5em 0 hsl(138, 93%, 58%);
+  }
+
+  .gitHub:hover,
+  .gitHub:focus {
+    background-color: hsla(138, 93%, 58%, 0.897);
+    color: hsl(223, 50%, 57%);
+    border: hsl(223, 50%, 57%) 0.125em solid;
+    font-weight: bold;
+    text-shadow: 0 0 0.125em hsl(223, 50%, 57%), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.65em 0 hsl(223, 50%, 57%),
+      0 0 1.5em 0 hsl(223, 50%, 57%);
+  }
+}
+
+/*2nd Card and logo pics*/
+.Card-B {
+  width: 75em;
+  height: 35em;
+  display: flex;
+  position: relative;
+  align-content: left;
+  top: 18.5em;
+  left: 10.5em;
+  background: hsla(0, 0%, 0%, 0.534);
+  border-radius: 10px;
+}
+
+.B-one {
+  font-family: latin_modern_mono_light10BdOb;
+  font-size: 3em;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 0.5em;
+  top: 0.25em;
+}
+
+.logoOne {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(138, 93%, 58%);
+  top: 6.5em;
+  left: 5.5em;
+  padding: 15px;
+  background-color: hsl(223, 50%, 57%);
+}
+
+.logoTwo {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(223, 50%, 57%);
+  top: 7.75em;
+  left: 7.5em;
+  padding: 15px;
+  background-color: hsl(138, 93%, 58%);
+}
+
+.logoThree {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(138, 93%, 58%);
+  top: 9.25em;
+  left: 9.5em;
+  padding: 15px;
+  background-color: hsl(223, 50%, 57%);
+}
+
+.pic1,
+.pic2,
+.pic3 {
+  width: 300px;
+  height: 300px;
+  animation: flip 25s infinite;
+}
+
+/*3rd Card and logos*/
+.Card-C {
+  width: 80em;
+  height: 45em;
+  display: flex;
+  position: relative;
+  align-content: left;
+  top: 25.5em;
+  left: 7.8em;
+  background-image: linear-gradient(
+    75deg,
+    hsla(0, 0%, 0%, 0.533),
+    hsl(231, 12%, 30%),
+    hsl(228, 24%, 32%),
+    hsl(201, 38%, 44%),
+    hsl(184, 67%, 47%)
+  );
+  background-size: 400%;
+  border-radius: 10px;
+  animation: gradientPulse 6s infinite alternate;
+}
+
+.third-Card {
+  border: 3px solid hsl(138, 93%, 58%);
+  border-radius: 10px;
+  display: flex;
+  position: absolute;
+  width: 18em;
+  height: 10.5em;
+  top: 3.25em;
+  left: 17em;
+  padding: 10px;
+  background-color: hsla(0, 0%, 100%, 0.062);
+  font-family: 'latin_modern_mono_light10BdOb';
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.C-One {
+  margin-top: -0.25em;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.logoFour {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(223, 50%, 57%);
+  top: 3.5em;
+  left: 7.5em;
+  background-color: hsl(138, 93%, 58%);
+}
+
+.logoFive {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(138, 93%, 58%);
+  top: 24em;
+  left: -3em;
+  background-color: hsl(223, 50%, 57%);
+}
+
+.logoSix {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(223, 50%, 57%);
+  top: 24em;
+  left: 3.5em;
+  background-color: hsl(138, 93%, 58%);
+}
+
+.logoSeven {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(138, 93%, 58%);
+  top: 3.5em;
+  left: -7.25em;
+  background-color: hsl(223, 50%, 57%);
+}
+
+.logoEight {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 3.5px solid hsl(138, 93%, 58%);
+  top: 24em;
+  left: 0.25em;
+  background-color: transparent;
+}
+
+.pic5,
+.pic6,
+.pic7,
+.pic8 {
+  width: 250px;
+  height: 250px;
+  margin-top: 1.5em;
+}
+
+.pic4 {
+  width: 230px;
+  height: 225px;
+  margin-top: 1.75em;
+  margin-left: 0.1em;
+  padding: 0.5em;
+}
+
+/*Fourth Card and projects*/
+.Card-D {
+  width: 45em;
+  height: 18em;
+  margin-top: 14em;
+  margin-left: 1.5em;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 0%, 0.534);
+}
+
+/*Typewriter effect (projects)*/
+.D-one {
+  font-family: 'latin_modern_mono_light10BdOb';
+  font-size: 4em;
+  width: max-content;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 10px;
+  position: relative;
+  top: 8.75em;
+  left: 9.9em;
+}
+
+.D-one::before,
+.D-one::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.D-one::before {
+  background: hsla(0, 0%, 0%);
+  border-radius: 10px;
+  animation: typewriter 6s steps(10) 2s alternate infinite;
+}
+
+.D-one::after {
+  width: 3px;
+  background: white;
+  animation: typewriter 6s steps(10) 2s alternate infinite,
+    blink 500ms steps(10) 2s infinite;
+}
+
+/*Projects Photos and cards*/
+#container {
+  width: 38em;
+  height: 10em;
+  display: flex;
+  position: relative;
+  margin-top: 4.5em;
+  margin-left: 4em;
+  gap: 2.5em;
+}
+
+.projectOne,
+.projectTwo,
+.projectThree {
+  width: 10em;
+  border: 2px solid hsl(223, 50%, 57%);
+  border-radius: 2px;
+  margin-left: 0.42em;
+  margin-top: 2em;
+}
+
+#git,
+#live {
+  font-family: 'latin_modern_mono_light10BdOb';
+  font-size: 1.25rem;
+  background: hsl(223, 50%, 57%);
+  border: 2px solid hsl(138, 93%, 58%);
+  border-radius: 10px;
+  padding: 0.25em 1em;
+  margin-left: 1.65em;
+  margin-top: 1em;
+}
+
+.church,
+.photoSite,
+.barbershop {
+  width: 12em;
+  height: 10em;
+  align-content: right;
+  background-image: linear-gradient(
+    75deg,
+    hsl(184, 67%, 47%),
+    hsl(201, 38%, 44%),
+    hsl(231, 12%, 30%),
+    hsla(0, 0%, 0%, 0.533)
+  );
+  background-size: 250%;
+  border-radius: 10px;
+  animation: gradientPulse1 6s infinite alternate;
+}
+
+/*footer*/
+.boot {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  width: max-content;
+  height: 1em;
+  display: flex;
+  position: relative;
+  color: hsl(0, 0%, 0%);
+}
