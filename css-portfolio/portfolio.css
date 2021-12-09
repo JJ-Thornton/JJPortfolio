@@ -120,7 +120,21 @@ body {
   }
 }
 
-/*logo div*/
+/*contact background*/
+@keyframes change {
+  0% {
+    background-position: left;
+    background-color: hsla(0, 0%, 0%, 0.377);
+  }
+  25% {
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, 0.658);
+  }
+  100% {
+    background-position: right;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+}
 
 /*main heading/name*/
 .mainHead {
@@ -835,14 +849,44 @@ body {
   animation: gradientPulse1 6s infinite alternate;
 }
 
+/*contact section*/
+#contact {
+  height: 10em;
+  margin-top: 1.5em;
+  background: hsla(0, 0%, 0%, 0.534);
+  font-family: 'latin_modern_mono_light10BdOb';
+  font-size: 1.5em;
+  animation: change 5s alternate infinite;
+}
+
+.contactInfo {
+  height: 10em;
+  width: 25em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: hsl(223, 50%, 57%);
+  color: hsl(120, 14%, 21%);
+  margin-left: 20em;
+}
+
+.offset {
+  color: hsl(138, 93%, 58%);
+  text-decoration: none;
+}
+
 /*footer*/
 .boot {
   margin-top: 0.5em;
   margin-left: 1em;
   margin-bottom: 0.5em;
   width: max-content;
-  height: 1em;
+  height: 4em;
   display: flex;
   position: relative;
   color: hsl(0, 0%, 0%);
+}
+
+.copyright-etc {
+  margin-top: 1em;
+  font-size: 1.25em;
 }
