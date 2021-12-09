@@ -126,9 +126,9 @@ body {
     background-position: left;
     background-color: hsla(0, 0%, 0%, 0.377);
   }
-  25% {
+  50% {
     background-position: center;
-    background-color: hsla(0, 0%, 0%, 0.658);
+    background-color: hsl(138, 93%, 50%);
   }
   100% {
     background-position: right;
@@ -852,11 +852,12 @@ body {
 /*contact section*/
 #contact {
   height: 10em;
+  width: 63.5em;
   margin-top: 1.5em;
   background: hsla(0, 0%, 0%, 0.534);
   font-family: 'latin_modern_mono_light10BdOb';
   font-size: 1.5em;
-  animation: change 5s alternate infinite;
+  animation: change 10s alternate infinite;
 }
 
 .contactInfo {
@@ -866,7 +867,7 @@ body {
   border-radius: 10px;
   background-color: hsl(223, 50%, 57%);
   color: hsl(120, 14%, 21%);
-  margin-left: 20em;
+  margin-left: 19em;
 }
 
 .offset {
