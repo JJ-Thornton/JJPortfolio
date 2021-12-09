@@ -430,6 +430,7 @@ body {
     position: absolute;
     top: 0.925em;
     left: 0.925em;
+    cursor: pointer;
   }
 
   .ig {
@@ -442,6 +443,7 @@ body {
     position: absolute;
     top: 0.89em;
     left: 0.95em;
+    cursor: pointer;
   }
 
   .fvr {
@@ -454,6 +456,7 @@ body {
     position: absolute;
     top: 0.89em;
     left: 0.95em;
+    cursor: pointer;
   }
 
   .socials1 {
